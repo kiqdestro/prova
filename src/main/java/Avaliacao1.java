@@ -12,6 +12,8 @@ public class Avaliacao1 {
         // implementar main
     }
     
-    // implementar raizesEquacao(Complexo, Complexo, Complexo)
+    public static Complexo[] raizesEquacao(Complexo a, Complexo b, Complexo c) {
+        
+    }
     
 }

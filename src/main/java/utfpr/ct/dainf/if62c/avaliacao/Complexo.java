@@ -40,19 +40,20 @@ public class Complexo {
     }
     
     public Complexo prod(Complexo c) {
-        
+        return new Complexo((real*c.real)-(img*c.img), (img*c.real)+(real*c.img));
     }
-    // implementar prod(double)
-
-    // implementar prod(Complexo)
     
-    // implementar div(Complexo)
+    public Complexo div(Complexo c) {
+        Complexo r = new Complexo(((real*c.real)+(img*c.img))/(Math.pow(c.real, 2)+Math.pow(c.img, 2)), ((img*c.real)-(real*c.img))/(Math.pow(c.real, 2)+Math.pow(c.img, 2)));
+        return r;
+    }
     
-    // implementar sqrt()
     public Complexo[] sqrt() {
-        // completar implementação
-        // retornar o vetor contendo as raízes
-        return null;
+        double p = Math.sqrt(Math.sqrt(Math.pow(real, 2)+Math.pow(img, 2)));
+        double v1 = p/2;
+        double v2 = (p/2)+Math.PI;
+        Complexo[] r = {new Complexo(p*(Math.cos(v1)),p*(Math.sin(v1))), new Complexo(p*(Math.cos(v2)),p*(Math.sin(v2)))};
+        return r;
     }
 
     @Override
